@@ -4,6 +4,15 @@
 // http://php.net/manual/en/language.generators.overview.php
 // Usage of this script $ php generator.php 100
 
+echo "argument value passed $argv[1]\n";
+
+$generator = iterateFib($argv[1]);
+
+foreach ($generator as $value) {
+    echo "$value\n";
+}
+
+
 function iterateFib($iterations){
 	
 	$last = 0;
@@ -16,11 +25,4 @@ function iterateFib($iterations){
 		$last = $current - $last;
 		yield $current;
 	}
-}
-
-echo "argument value passed $argv[1]\n";
-
-$generator = iterateFib($argv[1]);
-foreach ($generator as $value) {
-    echo "$value\n";
 }
