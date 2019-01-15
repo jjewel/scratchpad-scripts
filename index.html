@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+    function unhide(divID) {
+        var item = document.getElementById(divID);
+        if (item) {
+            item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+        }
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #building {
+            font-weight: bold;
+        }
+
+        #opening-hours {
+            font-weight: bold;
+        }
+
+        #show-hours1, #show-hours2 {
+            font-weight: normal;
+        }
+
+        .hidden { display: none; }
+        .unhidden { display: block; } 
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <div>
+                <tr>
+                    <td><input type="radio" name="collection-points"></td>
+                    <td><div id="building">Queen Adelaide Building (6kms)</div></td>
+                <tr>
+                    <td></td>
+                    <td><div>5400 N Braeswood Blvd, Houstan</div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="opening-hours" 
+                        class="unhidden" 
+                        onclick="javascript:unhide('show-hours1');">Opening Hours ⮝⮟
+                        <div id="show-hours1" class="unhidden">
+                            <div>Monday <i>9:00am - 05:30pm</i> </div>
+                            <div>Tuesday <i>9:00am - 05:30pm</i> </div>
+                        </div>
+                    </td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td><input type="radio" name="collection-points"></td>
+                    <td><div id="building">Queen Adelaide Building (6kms)</div></td>
+                <tr>
+                    <td></td>
+                    <td><div>5400 N Braeswood Blvd, Houstan</div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="opening-hours" 
+                        class="unhidden" 
+                        onclick="javascript:unhide('show-hours2');">Opening Hours ⮝⮟
+                        <div id="show-hours2" class="hidden">
+                            <div>Monday <i>9:00am - 05:30pm</i> </div>
+                            <div>Tuesday <i>9:00am - 05:30pm</i> </div>
+                        </div>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </form>
+</body>
+
+</html>
