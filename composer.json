@@ -1,0 +1,15 @@
+{
+    "name": "jason.jewel/scratchpad",
+    "description": "A project for testing out different concepts and techniques",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "~6.5.0"
+    },
+    "authors": [
+        {
+            "name": "Jason Jewel",
+            "email": "jjewe2009@gmail.com"
+        }
+    ],
+    "require": {}
+}
